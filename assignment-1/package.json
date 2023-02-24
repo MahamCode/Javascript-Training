@@ -1,0 +1,11 @@
+{
+  "name": "task-1",
+  "version": "1.0.0",
+  "description": "Define a function named multiply that takes two numbers as parameters and returns their product. Write code to test this function with different input values.",
+  "main": "Solution.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
