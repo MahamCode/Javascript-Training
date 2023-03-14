@@ -22,7 +22,7 @@ for (const [key, val] of studentEntries) {
 console.log(students.every((student)=>student.grade >=70))
 
     //Solution # 4
-console.log(students.fill(100));
+console.log(students.map(({ grade }) => grade).fill(100));
 
     //Solution # 5
 const studentsForFilter = [
@@ -55,22 +55,22 @@ const studentsList = [
     { name: "Alice", grade: 90 },
     { name: "Bob", grade: 80 },
     { name: "Charlie", grade: 95 },
-    { name: "Dave", grade: 85 }
+    { name: "Dave", grade: 50 }
 ];
 console.log(studentsList.flatMap((student) => student.grade >= 70));
 
     //Solution # 10
-studentsList.forEach((student) => console.log(student.name));
+studentsList.forEach(student=> console.log(student.name));
 
     //Solution # 11
 const string = "hello world";
 console.log(Array.from(string));
 
     //Solution # 12
-console.log(studentsList.includes('eve'));
+console.log(studentsList.map(students=>students.name).includes('Eve'));
 
     //Solution # 13
-console.log(studentsList.findIndex((studentsList) => studentsList.name === "Bob"));
+console.log(studentsList.map(students=>students.name).indexOf("Bob"))
 
     //Solution # 14
 console.log(studentsList.map((student) => student.grade))
