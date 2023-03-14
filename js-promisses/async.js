@@ -4,22 +4,24 @@ console.log(2)
 
 async function callMe(){
     try {
-        // const user = await getUser(1)
-        // console.log(user)
+        const user = await getUser(1)
+        console.log(user)
 
-        // const repos = await getRepos(user.userName)
-        // console.log(repos)
+        const repos = await getRepos(user.userName)
+        console.log(repos)
 
-        // const commits = await getRepoCommits(repos[0])
-        // console.log(commits)
-        let links = []
-        for(let i=1;i<=200;i++){
-            links.push(`https://jsonplaceholder.typicode.com/todos/${i}`)
-        }
-        for(let j =0;j<links.length;j++){
-            const { data } = await axios.get(links[j+1])
-            console.log(data)
-        }
+        const commits = await getRepoCommits(repos[0])
+        console.log(commits)
+
+        // let links = []
+        // for(let i=1;i<=200;i++){
+        //     links.push(`https://jsonplaceholder.typicode.com/todos/${i}`)
+        // }
+        // for(let j =0;j<links.length;j++){
+        //     const { data } = await axios.get(links[j+1])
+        //     console.log(data)
+        // }
+
         // let resultInPromisses = links.map((link) => {
         //     return  axios.get(link)
         // })

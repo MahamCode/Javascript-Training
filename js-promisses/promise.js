@@ -14,7 +14,7 @@ console.log(2)
 //     .then(commits => console.log(commits))
 //     .catch(err => console.log("error", err))
 
-let data = Promise.allSettled([getUser(1), getRepos(), getRepoCommits()])
+let data = Promise.allSettled([getUser(1), getRepos(), getRepoCommits(), calculation()])
 .then(res => {
     console.log(res)
     res.forEach(ele => {
@@ -54,15 +54,17 @@ function getRepoCommits(repo) {
 
     })
 }
+
 function calculation() {
     return new Promise((resolve, reject) => {
         for(let i =0; i<100000000; i++){
 
         }
-            resolve("result")
+        resolve("result")
         
     })
 }
+
 console.log(4)
 // microtask queues, promisses
 // macrotask queues , setTimeout, setinterval
